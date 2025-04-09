@@ -31,6 +31,12 @@ class Admin::SurveysController < Admin::BaseController
         redirect_to admin_surveys_path, notice: "Survey deleted!"
     end
     def show
+        @categories = @survey.categories.includes(:questions)
+    end
+    def preview
+      @survey = Survey.find(params[:id])
+      @categories = @survey.categories.includes(:questions)
+      @answers = Answer.order(:score)
     end
   
     private

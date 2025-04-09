@@ -1,0 +1,17 @@
+<h2><%= @answer.new_record? ? "New" : "Edit" %> Answer</h2>
+
+<%= form_with model: [:admin, @answer], local: true do |f| %>
+  <div style="margin-bottom: 10px;">
+    <%= f.label :content %><br>
+    <%= f.text_field :content, style: "width: 100%; padding: 8px;" %>
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <%= f.label :score %><br>
+    <%= f.number_field :score, style: "width: 100%; padding: 8px;" %>
+  </div>
+
+  <%= f.submit "Save", style: "padding: 10px 16px; background-color: #007bff; color: white; border-radius: 4px;" %>
+<% end %>
+
+<%= link_to "Back to Answers", admin_answers_path, style: "margin-top: 16px; display: inline-block;" %>

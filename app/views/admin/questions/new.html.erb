@@ -1,0 +1,7 @@
+<h2>New Question under "<%= @category.name %>"</h2>
+
+<div style="max-width: 600px;">
+  <%= render "form", survey: @survey, category: @category, question: @question %>
+</div>
+
+<%= link_to "Back to Survey", admin_survey_path(@survey), style: "margin-top: 16px; display: inline-block;" %>

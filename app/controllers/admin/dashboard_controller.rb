@@ -3,6 +3,7 @@ class Admin::DashboardController < ApplicationController
     def index
       @user_count = User.count
       @survey_count = Survey.count
+      @category_count = Category.count
     end
 
     private

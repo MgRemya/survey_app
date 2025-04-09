@@ -1,0 +1,33 @@
+<%# Make sure to have a good container and headings %>
+<div class="container mt-5">
+  <h1 class="text-center">Survey Preview</h1>
+  <div class="card">
+    <div class="card-header">
+      <h4><%= @survey.title %></h4>
+    </div>
+
+    <div class="card-body">
+      <h5>Survey Attempted by: <%= @user.name %></h5>
+      <h6>Survey Date: <%= @user_survey.created_at.strftime("%B %d, %Y") %></h6>
+
+      <div class="mt-4">
+        <% if @user_survey_responses.any? %>
+          <% @user_survey_responses.each do |response| %>
+            <div class="response">
+              <h6><%= response.question.content %></h6>
+              <p><strong>Your Answer:</strong> <%= response.answer.content %></p>
+              <p><strong>Category:</strong> <%= response.category.name %></p>
+              <p><strong>Score:</strong> <%= response.score %></p>
+              <hr>
+            </div>
+          <% end %>
+        <% else %>
+          <p>No responses found. Please check the survey data.</p>
+        <% end %>
+      </div>
+      <div class="text-center mt-4">
+        <%= link_to 'Back to Dashboard', dashboard_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>

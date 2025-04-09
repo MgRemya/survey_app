@@ -1,0 +1,28 @@
+<h1>Survey Preview: <%= @survey.title %></h1>
+<p style="margin-bottom: 20px;"><strong>Description:</strong> <%= @survey.description %></p>
+
+<% @categories.each do |category| %>
+  <div style="margin-bottom: 24px; padding: 16px; border: 1px solid #ccc; border-radius: 6px;">
+    <h3><%= category.name %></h3>
+    
+    <% if category.questions.any? %>
+      <ol>
+        <% category.questions.each do |question| %>
+          <li style="margin-bottom: 12px;">
+            <strong><%= question.content %></strong>
+            <ul style="margin-top: 6px; padding-left: 20px;">
+              <% @answers.each do |answer| %>
+                <li><%= answer.content %> (Score: <%= answer.score %>)</li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
+      </ol>
+    <% else %>
+      <p><em>No questions added to this category.</em></p>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to "← Back to Survey", admin_survey_path(@survey),
+            style: "display: inline-block; margin-top: 20px;" %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_04_09_032025) do
+ActiveRecord::Schema[7.1].define(version: 2025_04_09_163048) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -47,7 +47,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_09_032025) do
   end
 
   create_table "user_survey_responses", force: :cascade do |t|
-    t.bigint "user_surveys_id"
+    t.bigint "user_survey_id"
     t.bigint "question_id"
     t.bigint "answer_id"
     t.bigint "category_id"
@@ -57,7 +57,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_09_032025) do
     t.index ["answer_id"], name: "index_user_survey_responses_on_answer_id"
     t.index ["category_id"], name: "index_user_survey_responses_on_category_id"
     t.index ["question_id"], name: "index_user_survey_responses_on_question_id"
-    t.index ["user_surveys_id"], name: "index_user_survey_responses_on_user_surveys_id"
+    t.index ["user_survey_id"], name: "index_user_survey_responses_on_user_survey_id"
   end
 
   create_table "user_surveys", force: :cascade do |t|
@@ -85,7 +85,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_09_032025) do
   add_foreign_key "user_survey_responses", "answers"
   add_foreign_key "user_survey_responses", "categories"
   add_foreign_key "user_survey_responses", "questions"
-  add_foreign_key "user_survey_responses", "user_surveys", column: "user_surveys_id"
+  add_foreign_key "user_survey_responses", "user_surveys"
   add_foreign_key "user_surveys", "surveys"
   add_foreign_key "user_surveys", "users"
 end

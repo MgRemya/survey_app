@@ -1,2 +1,24 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<h1 style="font-size: 28px; margin-bottom: 20px;">Welcome, <%= current_user.name %>!</h1>
+
+<div style="margin-bottom: 32px;">
+  <h2 style="font-size: 22px;">Available Surveys</h2>
+
+  <% @available_surveys.each do |survey| %>
+    <div style="border: 1px solid #ccc; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
+      <h3><%= survey.title %></h3>
+      <p><%= survey.description %></p>
+
+      <% if @attempted_survey_ids.include?(survey.id) %>
+        <span style="color: green; font-weight: bold;">✅ Attempted</span>
+        <%= link_to 'Preview Survey', preview_survey_path(survey.id), class: 'btn-preview' %>
+
+      <% else %>
+        <%= link_to "Take Survey", attempt_survey_path(survey),
+                    style: "padding: 8px 14px; background-color: #007bff; color: white; border-radius: 4px; text-decoration: none;" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Logout", logout_path, method: :delete,
+            style: "padding: 8px 14px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px;" %>

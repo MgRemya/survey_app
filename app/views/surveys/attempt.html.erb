@@ -1,0 +1,26 @@
+<h1>Attempt Survey: <%= @survey.title %></h1>
+
+<%= form_with url: submit_survey_path(@survey), method: :post, local: true do %>
+  <% @categories.each do |category| %>
+    <div style="margin-bottom: 20px;">
+      <h3><%= category.name %></h3>
+
+      <% category.questions.each do |question| %>
+        <div style="margin-bottom: 12px;">
+          <p><strong><%= question.content %></strong></p>
+
+          <% @answers.each do |answer| %>
+            <label style="margin-right: 10px;">
+              <%= radio_button_tag "responses[#{question.id}]", answer.id %>
+              <%= answer.content %>
+            </label>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= submit_tag "Submit Survey",
+                 style: "padding: 10px 16px; background-color: #28a745; color: white; border-radius: 6px;" %>
+<% end %>
+

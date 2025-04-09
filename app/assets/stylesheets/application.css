@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+ /* Style for Preview Survey button */
+.btn-preview {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .btn-preview:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .btn-preview:active {
+    background-color: #1e7e34; /* Even darker green on click */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
