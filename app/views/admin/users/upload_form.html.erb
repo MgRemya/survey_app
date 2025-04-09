@@ -1,0 +1,5 @@
+<%= form_with url: admin_users_upload_csv_path, local: true, multipart: true do |f| %>
+    <%= file_field_tag :file, accept: '.csv' %><br><br>
+    <%= submit_tag "Upload Users via CSV", class: "btn" %>
+  <% end %>
+  

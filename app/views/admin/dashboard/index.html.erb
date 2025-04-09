@@ -1,0 +1,17 @@
+<h1>Superadmin Dashboard</h1>
+
+<p><strong>Total Users:</strong> <%= @user_count %></p>
+<p><strong>Total Surveys:</strong> <%= @survey_count %></p>
+
+<hr>
+
+<%= link_to "Upload Users", admin_users_upload_form_path, class: "btn" %>
+
+
+
+<%= link_to "Manage Surveys", admin_surveys_path, class: "btn" %>
+
+<%= link_to "View KPI Reports", "#", class: "btn" %><br>
+
+<%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" } %>
+

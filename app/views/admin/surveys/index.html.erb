@@ -1,0 +1,28 @@
+<h1>Surveys</h1>
+
+<div style="margin-bottom: 20px;">
+  <%= link_to "Create New Survey", new_admin_survey_path, class: "btn", style: "padding: 8px 12px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;" %>
+</div>
+
+<table style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd;">Title</th>
+      <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd;">Description</th>
+      <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd;">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @surveys.each do |survey| %>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;"><%= survey.title %></td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;"><%= survey.description %></td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+          <%= link_to "View", admin_survey_path(survey), style: "margin-right: 8px;" %>
+          <%= link_to "Edit", edit_admin_survey_path(survey), style: "margin-right: 8px;" %>
+          <%= link_to "Delete", admin_survey_path(survey), method: :delete, data: { confirm: "Are you sure?" }, style: "color: red;" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
