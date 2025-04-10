@@ -77,9 +77,9 @@ rails server
 
 ## 📦 To-Do & Improvements
 
-User change password option
-User management from admi side
-Graphical representation of KPI in superadmin dashboard.
-Download option.
+- [ ] User change password option
+- [ ] User management from admin side
+- [ ] Graphical representation of KPIs in the superadmin dashboard
+- [ ] Download option (CSV/PDF export for responses & KPIs)
 
 - ***
