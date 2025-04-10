@@ -11,6 +11,15 @@
   </head>
 
   <body>
+  <% flash.each do |key, message| %>
+    <div style="padding: 12px; margin: 10px 0; border-radius: 6px; 
+                background-color: <%= key == "notice" ? '#d4edda' : '#f8d7da' %>; 
+                color: <%= key == "notice" ? '#155724' : '#721c24' %>;
+                border: 1px solid <%= key == "notice" ? '#c3e6cb' : '#f5c6cb' %>;">
+      <%= message %>
+    </div>
+  <% end %>
+  
     <%= yield %>
   </body>
 </html>

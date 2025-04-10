@@ -1,0 +1,722 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/admin/answers_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/admin/categories_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/admin/dashboard_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/admin/questions_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/admin/surveys_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/admin/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/dashboard_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/kpi_helper.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/sessions_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/helpers/surveys_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/admin/surveys_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          3,
+          3,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/admin/base_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          7,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/surveys_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          2,
+          2,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/models/answer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/models/category.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/models/question.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/models/survey.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/models/user_survey_response.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/models/user_survey.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          4,
+          4,
+          3,
+          3,
+          1,
+          null,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/dashboard_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/admin/answers_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/admin/categories_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/admin/dashboard_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/admin/questions_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/controllers/admin/users_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/mailers/user_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/services/kpi_calculator.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null
+        ],
+        "branches": {
+        }
+      },
+      "/Users/jaganathsadasivan/Documents/projects/survey_app/user_survey_portal/app/services/user_csv_upload.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1744284003
+  }
+}

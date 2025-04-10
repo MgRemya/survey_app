@@ -13,6 +13,14 @@ class SurveysController < ApplicationController
   end
 
   def submit
+    if params[:responses].blank?
+      flash.now[:alert] = "Please answer at least one question before submitting."
+      @survey = Survey.find(params[:id])
+      @categories = @survey.categories.includes(:questions)
+      @answers = Answer.order(:score)
+      render :attempt, status: :unprocessable_entity
+      return
+    end
     ActiveRecord::Base.transaction do
       user_survey = current_user.user_surveys.create!(survey: @survey)
   

@@ -4,14 +4,21 @@ class Admin::UsersController < ApplicationController
   end
 
   def upload_csv
-      puts "hereeeeee"
     if params[:file].present?
       result = UserCsvUpload.call(params[:file])
-      redirect_to admin_dashboard_index_path, notice: "#{result[:created]} users created, #{result[:skipped]} skipped."
+  
+      if result[:created] > 0
+        redirect_to admin_dashboard_index_path,
+          notice: "#{result[:created]} users created, #{result[:skipped]} skipped."
+      else
+        redirect_to admin_users_upload_form_path,
+          alert: "No users were added. All rows were skipped (e.g., users already exist)."
+      end
     else
-      redirect_to admin_users_upload_path, alert: "Please select a CSV file."
+      redirect_to admin_users_upload_form_path, alert: "Please select a CSV file to upload."
     end
   end
+  
   private
 
   def require_superadmin
