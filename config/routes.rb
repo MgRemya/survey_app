@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get 'users/upload_form'
     post 'users/upload_csv'
     get 'dashboard/index'
+    get 'dashboard/user_kpis'
     resources :answers, except: [:show]
     resources :surveys do
       member do
@@ -41,6 +42,8 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   get 'dashboard', to: 'dashboard#index', as: :dashboard
+
+
 
 
 

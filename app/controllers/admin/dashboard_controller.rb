@@ -5,6 +5,18 @@ class Admin::DashboardController < ApplicationController
       @survey_count = Survey.count
       @category_count = Category.count
     end
+    def user_kpis
+      @user_surveys = UserSurvey.includes(:user, :survey, :user_survey_responses => :category)
+    
+      @kpi_data = @user_surveys.map do |us|
+        {
+          user: us.user,
+          survey: us.survey,
+          kpis: KpiCalculator.for_user_survey(us)
+        }
+      end
+    end
+    
 
     private
 

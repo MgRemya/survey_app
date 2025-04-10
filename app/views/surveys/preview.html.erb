@@ -1,33 +1,118 @@
-<%# Make sure to have a good container and headings %>
-<div class="container mt-5">
-  <h1 class="text-center">Survey Preview</h1>
-  <div class="card">
-    <div class="card-header">
-      <h4><%= @survey.title %></h4>
+<div style="max-width: 900px; margin: 40px auto; font-family: 'Segoe UI', sans-serif; color: #333;">
+  <div style="text-align: center; margin-bottom: 40px;">
+    <img src="<%= asset_path('download.jpeg') rescue 'https://via.placeholder.com/80' %>" alt="Logo" style="height: 60px; margin-bottom: 10px;">
+    <h1 style="font-size: 32px; font-weight: 700; color: #2c3e50;">Survey Report</h1>
+    <p style="font-size: 16px; color: #666;">Your answers to "<strong><%= @survey.title %></strong>"</p>
+  </div>
+
+  <div style="background-color: #f9f9f9; padding: 20px 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+    <p><strong>Respondent:</strong> <%= @user.name %></p>
+    <p><strong>Date:</strong> <%= @user_survey.created_at.strftime("%B %d, %Y at %I:%M %p") %></p>
+  </div>
+
+  <% if @user_survey_responses.any? %>
+    <div style="margin-top: 40px;">
+      <% @user_survey_responses.each_with_index do |response, i| %>
+        <div style="padding: 20px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 20px; background: white;">
+          <h3 style="margin-bottom: 10px; color: #007bff;"><%= "#{i+1}. #{response.question.content}" %></h3>
+
+          <ul style="list-style: none; padding: 0; font-size: 15px;">
+            <li><span style="font-weight: bold;">Your Answer:</span> <%= response.answer.content %></li>
+            <li><span style="font-weight: bold;">Category:</span> <%= response.category.name %></li>
+            <li><span style="font-weight: bold;">Score:</span>
+              <span style="color: <%= response.score >= 4 ? 'green' : response.score == 3 ? 'orange' : 'red' %>;">
+                <%= response.score %>
+              </span>
+            </li>
+          </ul>
+        </div>
+      <% end %>
     </div>
+  <% else %>
+    <div style="margin-top: 40px; text-align: center; color: #999;">
+      <p>No responses found for this survey.</p>
+    </div>
+  <% end %>
+  <% if @user_survey_responses.any? %>
+  <div style="text-align: center; margin-top: 30px; padding: 20px; background-color: #f1f1f1; border-radius: 10px;">
+    <h3 style="margin-bottom: 10px;">Your Survey Summary</h3>
+    <p><strong>Total Score:</strong> <%= @total_score %>/<%= @maximum_score%></p>
+  </div>
+<% end %>
+<div style="margin-top: 50px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+  <h3 style="margin-bottom: 20px; text-align: center;">📊 Key Performance Indicators (KPIs)</h3>
 
-    <div class="card-body">
-      <h5>Survey Attempted by: <%= @user.name %></h5>
-      <h6>Survey Date: <%= @user_survey.created_at.strftime("%B %d, %Y") %></h6>
+  <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+    <thead>
+      <tr style="background-color: #e9ecef;">
+        <th style="padding: 10px; text-align: left;">KPI</th>
+        <th style="padding: 10px; text-align: left;">Value</th>
+        <th style="padding: 10px; text-align: left;">Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 10px;">Engagement Index</td>
+        <td style="padding: 10px;"><%= @engagement_index %>%</td>
+        <td style="padding: 10px;">Overall participation level</td>
+      </tr>
 
-      <div class="mt-4">
-        <% if @user_survey_responses.any? %>
-          <% @user_survey_responses.each do |response| %>
-            <div class="response">
-              <h6><%= response.question.content %></h6>
-              <p><strong>Your Answer:</strong> <%= response.answer.content %></p>
-              <p><strong>Category:</strong> <%= response.category.name %></p>
-              <p><strong>Score:</strong> <%= response.score %></p>
-              <hr>
-            </div>
+      <tr>
+        <td style="padding: 10px;">High-Performance Answers</td>
+        <td style="padding: 10px;"><%= @high_perf_percent %>%</td>
+        <td style="padding: 10px;">% of responses scoring 4 or 5</td>
+      </tr>
+
+      <tr>
+        <td style="padding: 10px;">Total Score</td>
+        <td style="padding: 10px;"><%= @total_score %> / <%= @user_survey_responses.size * 5 %></td>
+        <td style="padding: 10px;">Cumulative points</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<% if @avg_score_by_category.any? %>
+  <div style="margin-top: 40px;">
+    <h4 style="margin-bottom: 20px; font-size: 22px; color: #2c3e50; text-align: center;">
+      🔍 Category-wise Analysis
+    </h4>
+
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; font-family: 'Segoe UI', sans-serif; font-size: 15px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);">
+        <thead style="background-color: #f8f9fa; border-bottom: 2px solid #dee2e6;">
+          <tr>
+            <th style="padding: 12px; text-align: left;">📂 Category</th>
+            <th style="padding: 12px; text-align: center;">📊 Avg. Score</th>
+            <th style="padding: 12px; text-align: center;">🧠 Classification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @avg_score_by_category.each do |category, score| %>
+            <tr style="border-bottom: 1px solid #eee;">
+              <td style="padding: 12px;"><%= category.name %></td>
+              <td style="padding: 12px; text-align: center;">
+                <span style="background-color: #e0f7fa; color: #007bff; padding: 6px 12px; border-radius: 5px; font-weight: bold;">
+                  <%= score %>
+                </span>
+              </td>
+              <td style="padding: 12px; text-align: center;">
+                <span style="background-color: #f1f3f5; color: #333; padding: 6px 12px; border-radius: 5px;">
+                  <%= classify_score(score) %>
+                </span>
+              </td>
+            </tr>
           <% end %>
-        <% else %>
-          <p>No responses found. Please check the survey data.</p>
-        <% end %>
-      </div>
-      <div class="text-center mt-4">
-        <%= link_to 'Back to Dashboard', dashboard_path, class: 'btn btn-primary' %>
-      </div>
+        </tbody>
+      </table>
     </div>
+  </div>
+<% end %>
+
+
+
+  <div style="text-align: center; margin-top: 40px;">
+    <%= link_to '← Back to Dashboard', dashboard_path,
+                style: "padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 6px;" %>
   </div>
 </div>
